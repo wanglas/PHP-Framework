@@ -1,7 +1,7 @@
 <?php
 //公用函数
-function check(){
-  echo 'ok';
+function check($a){
+  echo $a.'ok';
 }
 
  ?>
