@@ -1,0 +1,7 @@
+{
+  "name":"wanglas",
+  "description":"wanglas Framework",
+  "require": {
+    "symfony/var-dumper":"*"
+  }
+}
