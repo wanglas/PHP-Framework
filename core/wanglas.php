@@ -5,13 +5,13 @@ class wanglas {
   public static $classMap=array();
 
   static public function run(){
-    dump('run ok');
-    $route= new \core\route();
+    $route= new \core\lib\route();
+    dump($route);
   }
   //自动加载
   static public function load($class){
-    dump($class);
-    dump(WANGLAS.'\\'.$class.'.php');
+    // dump($class);
+    // dump(WANGLAS.'\\'.$class.'.php');
     if(isset($classMap[$class])){
       return ture;
     }else{
