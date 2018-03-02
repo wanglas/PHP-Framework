@@ -6,7 +6,18 @@ class wanglas {
 
   static public function run(){
     $route= new \core\lib\route();
-    dump($route);
+    $ctrlClass=$route->ctrl;
+    $action=$route->action;
+    $ctrlfile=APP.'/ctrl/'.$ctrlClass.'Ctrl.php';
+    // dump($ctrlfile); 检查控制器文件路径
+    $ctrlClass='\\'.MODULE.'\ctrl\\'.$ctrlClass.'Ctrl';
+    if(is_file($ctrlfile)){
+      include $ctrlfile;
+      $ctrl=new $ctrlClass();
+      $ctrl->$action();
+    }else {
+      throw new \Exception("找不到控制器", $ctrlClass);
+    }
   }
   //自动加载
   static public function load($class){

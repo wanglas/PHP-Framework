@@ -12,8 +12,9 @@
 
 //定义常量
 define('WANGLAS',realpath('./'));  //注意realpath
-define('CORE',WANGLAS.'/core');
-define('APP',WANGLAS.'/app');
+define('CORE',WANGLAS.'\core');
+define('APP',WANGLAS.'\app');
+define('MODULE','app');
 
 define('DEBUG',true);
 if(DEBUG){

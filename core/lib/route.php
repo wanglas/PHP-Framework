@@ -33,7 +33,7 @@ class route{
         }
         $i=$i+2;
       }
-      dump($_GET);
+      // dump($_GET); 测试get参数是否对应
     }else{
       $this->ctrl='index';
       $this->action='index';
